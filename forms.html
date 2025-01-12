@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #e9f7ef;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #2c3e50;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 75%;
+            background-color: #ef440e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        td, th {
+            padding: 15px;
+            text-transform: capitalize;
+            border: 1px solid #ddd;
+        }
+        th {
+            text-align: left;
+            background-color: #ef440e;
+            color: white;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select, textarea, input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border: none;
+            color: white;
+            background-color:#ef440e;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color:#ef440e;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <table>
+            <tr>
+                <td><label for="first_name">First Name:</label></td>
+                <td><input type="text" id="first_name" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Last Name:</label></td>
+                <td><input type="text" id="last_name" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email ID:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile Number:</label></td>
+                <td><input type="number" id="mobile" name="mobile" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" required></td>
+            </tr>
+            <tr>
+                <td><label for="pin_code">Pin Code:</label></td>
+                <td><input type="text" id="pin_code" name="pin_code" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" required></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td><input type="text" id="country" name="country" required></td>
+            </tr>
+            <tr>
+                <td><label>Hobbies:</label></td>
+                <td>
+                    <input type="checkbox" id="drawing" name="hobbies" value="drawing">
+                    <label for="drawing">Drawing</label>
+                    <input type="checkbox" id="singing" name="hobbies" value="singing">
+                    <label for="singing">Singing</label>
+                    <input type="checkbox" id="dancing" name="hobbies" value="dancing">
+                    <label for="dancing">Dancing</label>
+                    <input type="checkbox" id="sketching" name="hobbies" value="sketching">
+                    <label for="sketching">Sketching</label>
+                    <input type="checkbox" id="other_hobby" name="hobbies" value="other">
+                    <label for="other_hobby">Other:</label>
+                    <input type="text" id="other_hobby_text" name="other_hobby_text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>QUALIFICATIONS:</label>
+                    <table width="100%">
+                        <tr>
+                            <th>SI.NO</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class 10</td>
+                            <td><input type="text" name="board_10" required></td>
+                            <td><input type="text" name="percentage_10" required></td>
+                            <td><input type="text" name="year_10" required></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class 12</td>
+                            <td><input type="text" name="board_12" required></td>
+                            <td><input type="text" name="percentage_12" required></td>
+                            <td><input type="text" name="year_12" required></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text" name="board_grad" required></td>
+                            <td><input type="text" name="percentage_grad" required></td>
+                            <td><input type="text" name="year_grad" required></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td><input type="text" name="board_masters"></td>
+                            <td><input type="text" name="percentage_masters"></td>
+                            <td><input type="text" name="year_masters"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Courses Applied For:</label></td>
+                <td>
+                    <input type="radio" id="course1" name="course" value="engineering" required>
+                    <label for="course1">BCA</label>
+                    <input type="radio" id="course2" name="course" value="medicine">
+                    <label for="course2">B.com</label>
+                    <input type="radio" id="course3" name="course" value="arts">
+                    <label for="course3">B.Sc</label>
+                    <input type="radio" id="course4" name="course" value="science">
+                    <label for="course4">B.A</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
